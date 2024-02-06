@@ -2,7 +2,7 @@ import sympy as smp
 from sympy.calculus.util import continuous_domain
 
 ITERACIONES = 100000
-TOLERANCIA = 0.1e-2
+TOLERANCIA = 0.1e-3
 
 x = smp.symbols("x")
 
@@ -89,11 +89,11 @@ if not smp.Interval(a, b).intersect(
     ok = False
     print(f"La función {f} no está definida en [{a}, {b}]")
 
-if smp.sign(f.evalf(subs={x: a})) * smp.sign(f.evalf(subs={x: b})) > 0:
+""" if smp.sign(f.evalf(subs={x: a})) * smp.sign(f.evalf(subs={x: b})) > 0:
     ok = False
     print(
         f"f({a}) y f({b}) tienen el mismo signo, no hay raíz en el intervalo [{a}, {b}]."
-    )
+    ) """
 
 
 if ok:
