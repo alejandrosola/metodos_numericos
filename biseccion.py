@@ -1,7 +1,7 @@
 import sympy as smp
 from sympy.calculus.util import continuous_domain
 
-ITERACIONES = 100000
+ITERACIONES = 10000
 TOLERANCIA = 0.1e-3
 
 x = smp.symbols("x")
